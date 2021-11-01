@@ -1,13 +1,14 @@
+import React from "react";
 import ExpenseItem from "./ExpenseItem";
-import Card from "./Card";
-import "../styles/Expenses.css";
+import Card from "../UI/Card";
+import "../../styles/Expenses.css";
 function Expenses({ expenses }) {
   return (
     <Card className="expenses">
-      {expenses.map((expense) => {
+      {expenses.map((expense, i) => {
         return (
           <ExpenseItem
-            key={expense.Id}
+            key={i}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
